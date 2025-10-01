@@ -1,0 +1,135 @@
+body{
+    background: #181A20;
+}
+.abcircle{
+    position:relative;
+    height:300px;
+}
+.circle{
+    position: absolute;
+    height:50px;
+    width:50px;
+    border-radius:50%;
+    background-color: red;
+}
+.write{
+    height:200px;
+    position: relative;
+}
+.text{
+    position: absolute;
+    top:-30%;
+    left:30%;
+    color: white;
+    font-size:80px;
+}
+button{
+    position:absolute;
+    top:70%;
+    left:35%;
+    width:180px;
+    height:50px;
+    border-radius:120px;
+    border-width:2px;
+    font-size:30px;
+    cursor:pointer;
+    background-color: hsl(225, 39%, 19%);
+    color:white;
+}
+.prop{
+    position:absolute;
+    top:20%;
+    left:5%;
+    height:250px;
+    width:250px;
+    background: #7A6CF2;
+}
+.prop2{
+    position:absolute;
+    top:-100%;
+    left:80%;
+    height:500px;
+    width:500px;   
+    background:linear-gradient(
+        to right,
+        #F44771,
+        #FD29B5
+    ) 
+}
+.prop3{
+    position:absolute;
+    top:40%;
+    left:10%;
+    height:300px;
+    width:300px;
+    background:linear-gradient(
+        to right,
+        #FFE29F,
+        #FFA99F,
+        #FF719A
+    ) 
+}
+.prop4{
+    position:absolute;
+    top:-145%;
+    left:30%;
+    height:500px;
+    width:500px;
+    background-color: #FFADB2;
+}
+.prop5{
+    position:absolute;
+    top:50%;
+    left:200%;
+    height:500px;
+    width:500px;
+    background-color: #FFADB2;
+}
+.box3{
+    position: relative;
+    height:300px;
+}
+img{
+    z-index:-1;
+    position: absolute;
+    top:-90%;
+    left:65%;
+    width:500px;
+    rotate: -30deg;
+}
+@media(max-width:768px){
+    .text{
+        font-size: 60px;
+    }
+    button{
+        top:50%;
+        left:36%;
+        width:160px;
+        height:40px;
+        font-size: 25px;
+    }
+    .prop{
+        top:36%;
+        height:150px;
+        width:150px;
+    }
+    .prop2{
+        top:-80%;
+        height:400px;
+        width:400px;
+    }
+    .prop3{
+        top:30%;
+        height:200px;
+        width:200px;
+    }
+    .prop4{
+        top:-90%;
+        left:25%;
+        height:300px;
+        width:300px;
+    }
+    img{
+        left:75%;
+    }
+}
