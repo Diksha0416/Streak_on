@@ -1,5 +1,7 @@
 body{
     background: #181A20;
+    width:100%;
+    overflow:clip;
 }
 .abcircle{
     position:relative;
