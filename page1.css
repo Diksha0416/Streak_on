@@ -26,10 +26,6 @@
    background: #353a46;
    border-radius: 10px;
 }
-.panel button:active::before{
-    content:'● ';
-    color:#47f4ac;
-}
 .quote-box{
     background: #353a46;
     border:10px solid #353a46;
@@ -110,12 +106,24 @@
 }
 .streak-count{
     margin:20px;
-    height:250px;
+    height:260px;
     background: #181A20;
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.streak-count button{
+    font-size: 15px;
+    color: #fff;
+    border-radius: 10px;
+    margin:5px 0;
+    padding:4px 8px;
+}
+.streak-count button:hover{
+    background: #353a468c;
+    color:#F44771;
 }
 .circle{
     width:200px;
@@ -134,4 +142,74 @@
 .circle img{
     height:120px;
     width: 120px;
+}
+
+@keyframes moveleft {
+  0% {
+    transform: translateX(100vh);
+    opacity:0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity:1;
+  }
+}
+
+@keyframes moveright {
+  0% {
+    transform: translateX(-100vh);
+    opacity:0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity:1;
+  }
+}
+
+@media(max-width:1100px){
+    .data button{
+        padding: 30px;
+        font-size: 20px;
+    }
+    .circle{
+        height: 150px;
+        width: 120px;
+    }
+    .streak-count{
+        margin:15px ;
+    }
+    .circle img{
+        height:80px;
+        width: 80px;
+    }
+    .circle h1{
+        font-size: 15px;
+    }
+}
+@media(max-width:600px){
+    .data{
+        display: flex;
+        flex-direction: column;
+    }
+    .data button:nth-child(1){
+        padding: 25px 30px;
+    }
+    .data button{
+        padding: 25px;
+        font-size: 20px;
+    }
+    .streak-count{
+        margin:10px ;
+    }
+    .circle{
+        height: 150px;
+        width: 80px;
+    }
+    .circle img{
+        height:80px;
+        width: 80px;
+    }
+    .circle h1{
+        font-size: 15px;
+    }
 }
