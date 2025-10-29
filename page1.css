@@ -1,0 +1,137 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+.panel{
+    color:white;
+    margin:20px;
+    text-align: center;
+}
+.panel button{
+    padding:5px 10px ;
+    border: 1px solid #181A20;
+    font-size: 18px;
+}
+.panel h1{
+    margin-left: 10px;
+    font-size: 35px;
+    font-weight: 600;
+}
+.panel button::before{
+    content:'● ';
+    color:#f44771;
+}
+.panel button:hover{
+   background: #353a46;
+   border-radius: 10px;
+}
+.panel button:active::before{
+    content:'● ';
+    color:#47f4ac;
+}
+.quote-box{
+    background: #353a46;
+    border:10px solid #353a46;
+    border-radius: 10px;
+    margin: 10px 20px 10px 20px;
+    text-align: center;
+}
+.quote-box h1{
+    color:#F44771;
+    font-size:30px;   
+}
+.quote-box blockquote{
+    margin: 20px 0 0 0;
+    font-size: 26px;
+    min-height: 90px;
+    color: white;
+}
+.quote-box blockquote::before, .quote-box blockquote::after{
+    content:'"';
+}
+.quote-box span{
+    display: block;
+    margin-top: 10px;
+    text-align: end;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    color: white;
+    position: relative;
+}
+.quote-box span::before{
+    content: '∣';
+    width: 20px;
+    transform:rotate(90deg);
+    height: 2px;
+    color: #b53454;
+    display: inline-block;
+    height: 15px;
+}
+.data button{
+    border-radius: 10px;
+    padding: 50px;
+    background:linear-gradient(
+        to right,
+        #F44771,
+        #FD29B5
+    );
+    color: white;
+    font-size:30px;
+}
+.data button:hover{
+    background:linear-gradient(
+        to right,
+        #b53454,
+        #b61e83
+    );
+    box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.09);
+}
+.middle{
+    display: flex;
+    align-items: center;
+}
+.data{
+    margin:20px;
+    height:300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #353a468c;
+    border-radius: 10px;
+    width:70%;
+}
+.streak{
+    margin:20px;
+    height:300px;
+    background: #353a468c;
+    width:30%;
+    border-radius: 10px;
+}
+.streak-count{
+    margin:20px;
+    height:250px;
+    background: #181A20;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circle{
+    width:200px;
+    height: 200px;
+    border:10px solid #353a468c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.circle h1{
+    padding-top: 20px;
+    color:#fff;
+    font-size: 25px;
+}
+.circle img{
+    height:120px;
+    width: 120px;
+}

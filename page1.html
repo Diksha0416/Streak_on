@@ -4,9 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="page1.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-[#181A20]">
-    <h1>Lets maintain your streak</h1>
+    <!-- <h1>Lets maintain your streak</h1> -->
+    <div class="container">
+    <div class="quote-box">
+        <div style="background: #181A20; border:1px solid #353a46; border-radius: 10px;">
+        <h1>Quote to keep you motivated</h1>
+        <blockquote id="quote">Loading...</blockquote>
+        <span id="author">Loading....</span>
+        </div>
+        <p></p>
+    </div>
+    <div class="panel">
+        <h1>Focus Tasks</h1>
+        <button>Work</button>
+        <button>Hobbies</button>
+    </div>
+    <div class="middle">
+    <div class="data">
+        <button>Set Timer</button>
+        <button>StopWatch</button>
+    </div>
+    <div class="streak">
+        <div class="innerbox">
+            <div class="streak-count">
+                <div class="circle">
+                <h1>1</h1>
+                <img src="/images/fire.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+<script src="page1.js"></script>
 </body>
 </html>
