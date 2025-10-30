@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start-timer</title>
+    <link rel="stylesheet" href="starttimer.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+</head>
+<body class="bg-[#181A20]">
+    <div class="container">
+        <div class="circletime">
+            <div class="outer">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="210px" height="210px"class="inner">
+         <defs>
+            <linearGradient id="GradientColor">
+               <stop offset="0%" stop-color="#e91e63" />
+               <stop offset="100%" stop-color="#673ab7" />
+            </linearGradient>
+         </defs>
+         <circle cx="100" cy="100" r="87" stroke-linecap="round" id = "bg"/>
+          
+    </svg>
+            <div class="time" id="time">00:00:00</div>       
+                
+            </div>
+            <div>
+    </div>
+    <div class="btns">
+            <button id="stop" onclick="pausesave()"><i class="fa-solid fa-stop"></i></button>
+            <button id="start" onclick="startstop()"><i class="fa-solid fa-play" id="change"></i></i></button> 
+            <button id="reset" onclick="reset()"><i class="fa-solid fa-arrow-rotate-right"></i></button>
+         </div>
+        </div>
+        
+        
+        <div class="data">
+            <h1>Set the timer here</h1>
+            <div class="settime">
+                <div class="inp">                
+                    <div id="hours" >00</div>
+                    <div class="arrow">
+                        <i class="fa-solid fa-angle-up" onclick="uph()"></i>
+                        <i class="fa-solid fa-angle-down" onclick="downh()"></i>
+                    </div>
+                </div>
+                <div class="inp">
+                    <div id="minutes" >00</div>
+                    <div class="arrow">
+                        <i class="fa-solid fa-angle-up" onclick="upm()"></i>
+                        <i class="fa-solid fa-angle-down" onclick="downm()"></i>
+                    </div>
+                </div>
+                <div class="inp">
+                    <div id="seconds" >00</div>      
+                    <div class="arrow">
+                        <i class="fa-solid fa-angle-up" onclick="ups()"></i>
+                        <i class="fa-solid fa-angle-down" onclick="downs()"></i>
+                    </div>       
+                </div>
+            </div>
+            <div class="btns">
+                <button onclick="settimer()" style="width:100px; height:60px; border-radius: 10px; color:#fff; font-size:20px;"> Set timer </button>
+            </div>
+        </div>
+    
+</div>
+
+<script src="start timer.js"></script>
+</body>
+</html>

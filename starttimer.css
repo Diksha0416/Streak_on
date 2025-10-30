@@ -1,0 +1,212 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width:100vw;
+    height:100vh;
+}
+.circletime {
+    margin:20px;
+    width: 50%;
+    background: #3f455880;
+    height:94vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.outer{
+    margin:0;
+    width:200px;
+    height:200px;
+    /* background: #451285; */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 6px 6px 10px -1px #181a2070,
+                -6px -6px 10px -1px #181a20fa;
+}
+.inner{
+    width:200px;
+    height:200px;
+    position: relative;
+    /* background: #3a2257; */
+    border-radius: 50%;
+    box-shadow: inset 40px 40px 60px -10px #12141870,
+                inset -40px -40px 60px -10px #181a20fa,
+                -0.5px -0.5px 0px #181a20fa,
+                0.5px 0.5px 0px #181a2070,
+                0px 120px 100px -100px #181a2070;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.data {
+    height:94vh;
+    margin:20px;
+    width: 50%;
+    background: #3f455880;
+    height:94vh;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+circle{
+    fill:none;
+    stroke: url(#GradientColor);
+    stroke-width: 25px;
+    stroke-dasharray: 550;
+    stroke-dashoffset:550;
+    /* animation: anim 2s linear forwards; */
+    transition:  stroke-dashoffset 1s linear;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+/* @keyframes anim{
+    100%{
+        stroke-dashoffset: 100;  
+    }
+} */
+.time{
+    position: absolute;
+    font-size: 20px;
+    color: #fff;
+}
+.btns{
+    display: flex;
+    flex-direction: row;
+}
+.btns button{
+    margin: 40px 10px 0 10px;
+    position: relative;
+    width:50px;
+    height:50px;
+    background:linear-gradient(
+        to right,
+        #f4477289,
+        #fd29b699
+    );
+    border-radius: 50%;
+    
+}
+.btns button:nth-child(2){
+    transform:scale(1.5);
+}
+.btns button i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+.btns button:hover{
+    background:linear-gradient(
+        to right,
+        #b53454,
+        #b61e83
+    );
+    box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.09);
+}
+.data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:50%;
+}
+.data .settime{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+.data .settime #hours, .data .settime #minutes, .data .settime #seconds{
+    width:60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 10px;
+    background:linear-gradient(
+        to right,
+        #f4477289,
+        #fd29b699
+    );
+    color: #fff;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.data .settime .inp{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width:100px;
+    height: 80px;
+    margin: 10px;
+    border-radius: 10px;
+    background:linear-gradient(
+        to right,
+        #f4477289,
+        #fd29b699
+    );  
+}
+.data .settime .inp .arrow i{
+    color: #fff;
+}
+.data .settime .inp .arrow i:hover{
+    cursor: pointer;
+    text-shadow: 
+      0 0 10px #ff4fd8,      /* soft outer glow */
+      0 0 20px #ff4fd8,
+      0 0 30px #ff4fd8;
+    transform: scale(1.1);  
+}
+.data h1{
+    color:#fff;
+    font-size: 30px;
+}
+@media(max-width:800px){
+    .data .settime #hours, .data .settime #minutes, .data .settime #seconds{
+        height:40px;
+        width:40px;
+        font-size: 15px;
+    }
+    .data .settime .inp{
+        height:50px;
+        width:55px;
+    }
+    .data .settime .inp .arrow i{
+        font-size: 10px;
+    }
+    .data h1{
+        font-size:20px;
+    }
+}
+@media(max-width:500px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height:100vh;
+        width:100vw;
+    }
+    .circletime{
+        width:70%;
+    }
+    .data{
+        width: 70%;
+    }
+}
