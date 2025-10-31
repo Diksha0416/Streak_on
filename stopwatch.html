@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start-timer</title>
+    <link rel="stylesheet" href="stopwatch.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+</head>
+<body class="bg-[#181A20]">
+    <div class="container">
+        <div class="circletime">
+            <div class="outer spin">
+            <div class="ball"></div>
+            <div class="time" id="time">00:00:00</div>       
+            <div class="box"></div>   
+            <div class="box" style="top:85%"></div>
+            <div class="box" style="left:9%; top:46%;transform: rotate(90deg);"></div>
+            <div class="box" style="left:89%; top:46%;transform: rotate(90deg);"></div> 
+            <div class="box" style="top:19%; transform: rotate(45deg); left:81%; height:15px; width:1px"></div>
+            <div class="box" style="top:18%; transform: rotate(-45deg); left:21%; height:15px; width:1px"></div>
+            <div class="box" style="top:75%; transform: rotate(45deg); left:21%; height:15px; width:1px"></div>
+            <div class="box" style="top:75%; transform: rotate(-45deg); left:80%; height:15px; width:1px"></div>
+            </div>
+            <div>
+    </div>
+    <div class="btns">
+            <button id="stop" onclick="pausesave()"><i class="fa-solid fa-stop"></i></button>
+            <button id="start" onclick="startstop()"><i class="fa-solid fa-play" id="change"></i></i></button> 
+            <button id="reset" onclick="reset()"><i class="fa-solid fa-arrow-rotate-right"></i></button>
+         </div>
+        </div>
+        
+        
+        <div class="data">
+            <h1>Stopwatch time</h1>
+            <div class="settime">
+                <div class="inp">                
+                    <div id="hours" >00</div>
+                    <div class="calib">hrs</div>
+                </div>
+                <div class="inp">
+                    <div id="minutes" >00</div>
+                    <div class="calib">mins</div>
+                </div>
+                <div class="inp">
+                    <div id="seconds" >00</div>   
+                    <div class="calib">secs</div>         
+                </div>
+            </div>
+            <div id="resetcheck">
+                <!-- <button onclick="settimer()" style="width:180px; height:30px; border-radius: 10px; color:#fff; font-size:20px;"> Want to save time? </button> -->
+            </div>
+        </div>
+    
+</div>
+
+<script src="stopwatch.js"></script>
+</body>
+</html>

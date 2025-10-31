@@ -1,0 +1,237 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width:100vw;
+    height:100vh;
+}
+.circletime {
+    margin:20px;
+    width: 50%;
+    background: #3f455880;
+    height:94vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.outer{
+    margin:0;
+    width:200px;
+    height:200px;
+    /* background: #451285; */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 6px 6px 10px -1px #181a2070,
+                -6px -6px 10px -1px #181a20fa;
+    position: relative;
+    /* transform: rotate(-90deg); */
+}
+
+
+:root{
+    --orbit-size: 200px;
+    --ball-size: 24px;
+    --duration:60s;
+}
+.ball{
+    width: var(--ball-size);
+    height: var(--ball-size);
+    border-radius: 50%;
+    background:linear-gradient(
+        135deg,
+        #F44771,
+        #FD29B5
+    );
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 44%;
+    left: 95%;
+    transform-origin: -90px center; /* radius = half orbit - ball radius */
+    transition: transform 1s linear;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45), 0 0 12px rgba(255,122,24,0.12);
+}
+
+.time{
+    position: absolute;
+    font-size: 20px;
+    color: #fff;
+}
+.box{
+    position: absolute;
+    width:4px;
+    height:20px;
+    background:linear-gradient(
+        135deg,
+        #F44771,
+        #FD29B5
+    );
+    top:5%;
+}
+
+/*  */
+.data {
+    height:94vh;
+    margin:20px;
+    background: #3f455880;
+    height:94vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:50%;
+}
+.calib{
+    width:15px;
+    height:60px;
+    font-size: 10px;
+    display: flex;
+    align-items: end;
+}
+.btns{
+    display: flex;
+    flex-direction: row;
+}
+.btns button{
+    margin: 40px 10px 0 10px;
+    position: relative;
+    width:50px;
+    height:50px;
+    background:linear-gradient(
+        to right,
+        #f4477289,
+        #fd29b699
+    );
+    border-radius: 50%;
+    
+}
+.btns button:nth-child(2){
+    transform:scale(1.5);
+}
+.btns button i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+.btns button:hover{
+    background:linear-gradient(
+        to right,
+        #b53454,
+        #b61e83
+    );
+    box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.09);
+}
+.data .settime{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+.data .settime #hours, .data .settime #minutes, .data .settime #seconds{
+    width:60px;
+    height: 60px;
+    margin: 10px;
+    margin-right: 5px;
+    border-radius: 10px;
+    background:linear-gradient(
+        to right,
+        #f4477289,
+        #fd29b699
+    );
+    color: #fff;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.data .settime .inp{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width:100px;
+    height: 80px;
+    margin: 10px;
+    border-radius: 10px;
+    background:linear-gradient(
+        to right,
+        #f4477289,
+        #fd29b699
+    );  
+}
+.data h1, .hrr{
+    color:#fff;
+    font-size: 30px;
+}
+.divrr{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.butrr{
+    margin-top: 15px;
+    font-size: 20px;
+    color: #fff;
+}
+.butrr:hover{
+    cursor: pointer;
+    text-shadow: 
+      0 0 5px #ff4fd8,      /* soft outer glow */
+      0 0 15px #ff4fd8,
+      0 0 25px #ff4fd8;
+    transform: scale(1.1);  
+}
+@media(max-width:800px){
+    .data .settime #hours, .data .settime #minutes, .data .settime #seconds{
+        height:40px;
+        width:70%;
+        font-size: 15px;
+        margin:5px;
+        margin-right: 0;
+    }
+    .data .settime .inp{
+        height:50px;
+        width:65px;
+    }
+    .data h1{
+        font-size:20px;
+    }
+    .calib{
+        font-size: 8px;
+        width:30%;
+        margin-right: 5px;
+        align-items: end;
+        margin-bottom: 15px;
+        margin-left: 0;
+        margin-top: 0;
+    }
+}
+@media(max-width:500px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height:100vh;
+        width:100vw;
+    }
+    .circletime{
+        width:70%;
+    }
+    .data{
+        width: 70%;
+    }
+}
