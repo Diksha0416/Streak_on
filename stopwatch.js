@@ -6,6 +6,17 @@ let disptime = document.getElementById("time")
 let [seconds, minutes, hours, savehrs, savemins, savesecs] =[0,0,0,0,0,0]
 let change = document.getElementById("change");
 
+function homereturn(){
+    let container = document.getElementById("ctn")
+    container.style.transition = "transform 2s ease, opacity 2s ease";
+    container.style.transform = "scale(0.95)"
+    container.style.opacity = "0"
+
+    setTimeout(()=>{
+        window.location.href = "page1.html";
+    },1400)
+}
+
 function stopwatch(){
     seconds++;
     if(seconds==60){

@@ -12,6 +12,17 @@ let time = document.getElementById("time")
 // acthrs ones.. are used for saving actual set time
 // currenthrs ones... will do changes in timer
 
+function homereturn(){
+    let container = document.getElementById("ctn")
+    container.style.transition = "transform 2s ease, opacity 2s ease";
+    container.style.transform = "scale(0.95)"
+    container.style.opacity = "0"
+
+    setTimeout(()=>{
+        window.location.href = "page1.html";
+    },1400)
+}
+
 // up
 function uph(){  
     currenthrs= (currenthrs+1)%24;

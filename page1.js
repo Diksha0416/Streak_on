@@ -41,6 +41,28 @@ function work(){
     streak.style.animation = "moveleft 0.5s linear forwards"
 
 }
+function btnstop(){
+    let container = document.getElementById("ctn")
+    container.style.transition = "transform 2s ease, opacity 2s ease";
+    container.style.transform = "scale(0.95)"
+    container.style.opacity = "0"
+
+    setTimeout(()=>{
+        window.location.href='stopwatch.html'
+    },1400)
+}
+
+function btnsett(){
+    let container = document.getElementById("ctn")
+    container.style.transition = "transform 2s ease, opacity 2s ease";
+    container.style.transform = "scale(0.95)"
+    container.style.opacity = "0"
+
+    setTimeout(()=>{
+        window.location.href='start timer.html'
+    },1400)
+}
+
 
 function updstreak(){
     let records = JSON.parse(localStorage.getItem("stoprecords")) || {};
