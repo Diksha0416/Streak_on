@@ -31,6 +31,7 @@ button{
     left:35%;
     width:180px;
     height:50px;
+    border:0;
     border-radius:120px;
     border-width:2px;
     font-size:30px;
@@ -38,6 +39,16 @@ button{
     background-color: hsl(225, 39%, 19%);
     color:white;
 }
+button:hover{
+        transform: scale(1.05);
+        transition:0.5s ease-in-out;
+        background:linear-gradient(
+        135deg,
+        hsl(225, 39%, 19%),
+        hsl(215, 21%, 24%)
+        );
+        box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.09);
+    }
 .prop{
     position:absolute;
     top:20%;
@@ -91,6 +102,16 @@ button{
     position: relative;
     height:300px;
 }
+.trans:hover{
+    transform: scale(1.05);
+    transition:0.5s ease-in-out;
+    box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.09);
+}
+span:hover{
+    transform: scale(1.05);
+    transition:0.5s ease-in-out;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.271);
+}
 img{
     z-index:-1;
     position: absolute;
@@ -109,6 +130,7 @@ img{
         width:160px;
         height:40px;
         font-size: 25px;
+        border: 0;
     }
     .prop{
         top:36%;
@@ -134,4 +156,48 @@ img{
     img{
         left:75%;
     }
+}
+@keyframes moveright {
+  0% {
+    transform: translateX(0);
+    opacity:1;
+  }
+  100% {
+    transform: translateX(100vh);
+    opacity:0;
+  }
+}
+
+@keyframes moveup {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes movedown {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+
+@keyframes moveleft {
+  0% {
+    transform: translateX(0);
+    opacity:1;
+  }
+  100% {
+    transform: translateX(-100vh);
+    opacity:0;
+  }
 }

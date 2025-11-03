@@ -8,18 +8,34 @@
 </head>
 <body>
     <div class="abcircle">
-    <div class="circle prop"></div>
-    <div class="circle prop4"></div>
-    <div class="circle prop2"></div>
+    <div class="circle prop trans" id="cr1"></div>
+    <div class="circle prop4 trans" id="cr2"></div>
+    <div class="circle prop2 trans" id="cr3"></div>
     </div>
     <div class="write">
     <span class="text">Focused, </br> Motivated</span>
-    <button onclick="window.location.href='page1.html'" >Start</button>
+    <button onclick=btn() >Start</button>
     </div>
     <div class="box3">
-    <div class="circle prop3"></div>
-    <div ><img src="images/sticker.jpg"></div>
+    <div class="circle prop3 trans" id="cr4"></div>
+    <div ><img id="im" src="images/sticker.jpg"></div>
     </div>
-
+<script>
+    function btn(){
+        let cr1 = document.getElementById("cr1");
+        let cr2 = document.getElementById("cr2");
+        let cr3 = document.getElementById("cr3");
+        let cr4 = document.getElementById("cr4");
+        let im = document.getElementById("im");
+        cr1.style.animation = "moveleft 2s linear forwards"
+        cr2.style.animation = "moveup 2s linear forwards"
+        cr3.style.animation = "moveright 2s linear forwards"
+        cr4.style.animation = "movedown 2s linear forwards"
+        im.style.animation = "movedown 2s linear forwards"
+        setTimeout(() => {
+        window.location.href = "page1.html";
+    }, 1400);
+    }
+</script>
 </body>
 </html>

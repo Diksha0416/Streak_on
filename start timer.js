@@ -113,6 +113,10 @@ function timer(){
     savehrs = acthrs - currenthrs;
     savemins = actmins - currentmts;
     savesecs = actsecs - currentsec;
+    let actime = acthrs * 3600 + actmins * 60 + currentsec;
+    let curtime = currenthrs * 3600 + currentmts * 60 + currentsec;
+    let savetime = actime - curtime
+    saveTimeSpent(savetime)
     alert("Time’s up! Your "+ savehrs+" hrs,"+savemins+" mins and "+savesecs+" sec time is saved." )
     }
     
@@ -149,6 +153,10 @@ function pausesave(){
     savehrs = acthrs - currenthrs;
     savemins = actmins - currentmts;
     savesecs = actsecs - currentsec;
+    let actime = acthrs * 3600 + actmins * 60 + currentsec;
+    let curtime = currenthrs * 3600 + currentmts * 60 + currentsec;
+    let savetime = actime - curtime
+    saveTimeSpent(savetime)
     alert("Your "+ savehrs+" hrs,"+savemins+" mins and "+savesecs+" sec time is saved." )
     hours.innerHTML = "00";
     minutes.innerHTML = "00";
@@ -168,4 +176,14 @@ function reset(){
     change.classList.remove("fa-pause");
     change.classList.add("fa-play");
     circle.style.strokeDashoffset=0;
+}
+
+function saveTimeSpent(savetime){
+    const today = new Date().toISOString().split("T")[0];
+    const totalSeconds = savetime;
+
+    let records = JSON.parse(localStorage.getItem("stoprecords")) || {};
+    records[today] = (records[today] || 0) + totalSeconds;
+    localStorage.setItem("stoprecords", JSON.stringify(records));
+    console.log("Saving time:", records[today]);
 }

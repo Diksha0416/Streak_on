@@ -60,8 +60,8 @@ function createcheckbox(hours, minutes, seconds){
 
     button1.onclick=function(){
         alert("Your "+ hours+" hrs,"+minutes+" mins and "+seconds+" sec time is saved." );
+        saveTimeSpent(hours, minutes, seconds);
         addbtn.innerHTML = "";
-
         hrs.innerHTML = "00"
         min.innerHTML = "00"
         secs.innerHTML = "00"
@@ -82,7 +82,10 @@ function startstop(){
     if(isRunning){
         // ⏸ Pause timer
         clearInterval(timerInterval);
-        createcheckbox(hours, minutes, seconds)        
+        // createcheckbox(hours, minutes, seconds)   
+        hrs.innerHTML = hours < 10? "0" + hours : hours;
+        min.innerHTML = minutes < 10? "0" + minutes : minutes;
+        secs.innerHTML = seconds < 10? "0" + seconds : seconds;     
         isRunning = false;
         change.classList.remove("fa-pause");
         change.classList.add("fa-play")
@@ -90,6 +93,9 @@ function startstop(){
     else{
         // ▶ Start timer
         addbtn.innerHTML = "";
+        hrs.innerHTML = "00"
+        min.innerHTML = "00"
+        secs.innerHTML = "00"
         timerInterval = setInterval(stopwatch,1000)
         isRunning = true;
         change.classList.remove("fa-play");
@@ -130,13 +136,26 @@ function pausesave(){
     savehrs = hours;
     savemins = minutes;
     savesecs = seconds;
-    alert("Your "+ hours+" hrs,"+minutes+" mins and "+seconds+" sec time is saved." )
+    saveTimeSpent(hours, minutes, seconds);
+    alert("Your "+ hours+" hrs,"+minutes+" mins and "+seconds+" sec time is saved.")
     hours=0;
     minutes=0;
     seconds=0;
     disptime.innerHTML="0"+hours+":"+"0"+minutes+":"+"0"+seconds;
-    
+    hrs.innerHTML = "00"
+    min.innerHTML = "00"
+    secs.innerHTML = "00"
 }
 
 
+function saveTimeSpent(hours, minutes, seconds){
+    const today = new Date().toISOString().split("T")[0];
+    const totalSeconds = hours * 3600 + minutes * 60 + seconds;
+
+    let records = JSON.parse(localStorage.getItem("stoprecords")) || {};
+    records[today] = (records[today] || 0) + totalSeconds;
+    localStorage.setItem("stoprecords", JSON.stringify(records));
+    console.log("Saving time:", hours, minutes, seconds, records[today]);
+
+}
 
