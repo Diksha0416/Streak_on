@@ -54,7 +54,7 @@ It keeps you motivated by tracking how long you’ve stayed focused each day, sh
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/streak-focus.git
+   git clone https://github.com/Diksha0416/Streak_on.git
    ```
 2. Open the folder and launch `index.html` in your browser.
 3. That’s it — your streak tracking app is ready!
