@@ -1,8 +1,8 @@
 body{
     margin: 0;          /* Remove default margin */
     padding: 0;         /* Remove default padding */
-    width: 100%;        /* Full width of viewport */
-    height: 100%;       /* Full height of viewport */
+    /* width: 100%;        /* Full width of viewport */
+    /* height: 100%;       Full height of viewport */ 
     background: #181A20;
     overflow: hidden;   /
 }
