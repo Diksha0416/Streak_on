@@ -1,10 +1,13 @@
 body{
     margin: 0;          /* Remove default margin */
-    padding: 0;         /* Remove default padding */
-    /* width: 100%;        /* Full width of viewport */
-    /* height: 100%;       Full height of viewport */ 
-    background: #181A20;
-    overflow: hidden;   /
+    padding: 0;   
+    background: #181A20;      /* Remove default padding */   
+}
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 .abcircle{
     position:relative;
@@ -125,11 +128,13 @@ img{
 }
 @media(max-width:768px){
     .text{
+        left:20%;
         font-size: 60px;
     }
+    
     button{
         top:50%;
-        left:36%;
+        left:20%;
         width:160px;
         height:40px;
         font-size: 25px;
@@ -137,8 +142,9 @@ img{
     }
     .prop{
         top:36%;
-        height:150px;
-        width:150px;
+        height:140px;
+        width:140px;
+        left:-2%;
     }
     .prop2{
         top:-80%;
@@ -147,19 +153,21 @@ img{
     }
     .prop3{
         top:30%;
+        left:-10%;
         height:200px;
         width:200px;
     }
     .prop4{
         top:-90%;
-        left:25%;
+        left:5%;
         height:300px;
         width:300px;
     }
     img{
-        left:65%;
+        left:50%;
     }
 }
+
 @keyframes moveright {
   0% {
     transform: translateX(0);
