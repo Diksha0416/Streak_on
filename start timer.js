@@ -128,7 +128,7 @@ function timer(){
     let curtime = currenthrs * 3600 + currentmts * 60 + currentsec;
     let savetime = actime - curtime
     saveTimeSpent(savetime)
-    alert("Time’s up! Your "+ savehrs+" hrs,"+savemins+" mins and "+savesecs+" sec time is saved." )
+    alert("Time’s up! Your time is saved." )
     }
     
     proglength = currenthrs * 60*60 + currentmts*60+ currentsec;
@@ -168,7 +168,7 @@ function pausesave(){
     let curtime = currenthrs * 3600 + currentmts * 60 + currentsec;
     let savetime = actime - curtime
     saveTimeSpent(savetime)
-    alert("Your "+ savehrs+" hrs,"+savemins+" mins and "+savesecs+" sec time is saved." )
+    alert("Your time is saved." )
     hours.innerHTML = "00";
     minutes.innerHTML = "00";
     seconds.innerHTML = "00";
